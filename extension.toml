@@ -1,0 +1,12 @@
+# Teascript Language Extension for Zed
+id = "teascript"
+name = "Teascript"
+description = "Teascript support."
+version = "0.1.0"
+schema_version = 1
+repository = "https://github.com/revengerwizard/zed-teascript"
+authors = ["Wizard"]
+
+[grammars.teascript]
+repository = "https://github.com/revengerwizard/tree-sitter-teascript"
+rev = "dcc12f8a7c817dd22dbb0970c3e4354f786c1f3a"
