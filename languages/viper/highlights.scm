@@ -1,7 +1,14 @@
 ;; Keywords
-["export" "import" "from" "as" "function" "var" "const"] @keyword
+["export" "import" "from" "as" "function" "var" "const" "class" "new"] @keyword
 
-["return" "continue" "break" "if" "else" "for" "switch" "case" "default"] @return
+["return" "continue" "break" "if" "else" "for" "while" "do" "switch" "case" "default" "in" "is"] @keyword.control
+
+(while_statement "while" @keyword.control)
+(do_while_statement "do" @keyword.control)
+(case_clause "case" @keyword.control)
+(else_clause "else" @keyword.control)
+(else_if_clause "else" @keyword.control)
+(else_if_clause "if" @keyword.control)
 
 ["and" "or" "not"] @keyword
 
@@ -11,6 +18,8 @@
 
 (function_declaration name: (identifier) @function)
 (lambda_expression) @function
+(postfix_expression (call_suffix)) @function.call
+(new_expression) @function.call
 
 (class_declaration name: (identifier) @type)
 
@@ -19,7 +28,7 @@
 (boolean) @constant.builtin
 (nil) @constant.builtin
 (self) @variable.builtin
-(super) @variable.builtin
+(super) @keyword
 
 (binary_number) @constant.numeric.integer
 (octal_number) @constant.numeric.integer

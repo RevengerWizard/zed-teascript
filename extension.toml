@@ -9,4 +9,4 @@ authors = ["Wizard"]
 
 [grammars.teascript]
 repository = "https://github.com/revengerwizard/tree-sitter-teascript"
-rev = "dcc12f8a7c817dd22dbb0970c3e4354f786c1f3a"
+rev = "9845700977567bd4cb7b26fde1118bbbce16fec1"
